@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todos!</title>
+        <script src="logic.js"></script>
+    </head>
+    <body>
+        <div class="sidebar-container">
+            <div class="top-inner-siderbar">
+                <li>
+                    <div class="profile-container">
+                        <button class="user-profile">
+                            <img class="user-profile-img"
+                                src="./assets/imgs/profile.svg"
+                                alt="Profile Icon">
+                            <h3>User Name</h3>
+                            <img class="drop-down"
+                                src="./assets/imgs/down-arrow.svg"
+                                alt="Down Arrow Icon">
+                        </button>
+                        <button class="menu-control" onclick="toggleSideBar()">
+                            <img src="./assets/imgs/menu-control.svg"
+                                alt="Menu control">
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <button>
+                        <img src="./assets/imgs/add.svg" alt="Add Icon">
+                        <span>Add Task</span>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <img src="./assets/imgs/check.svg" alt="Completed Icon">
+                        <span>Completed</span>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <img src="./assets/imgs/projects.svg"
+                            alt="Projects Icon">
+                        <span>My Projects</span>
+                    </button>
+                </li>
+            </div>
+            <div class="resizer"></div>
+        </div>
+        <div class="main-content">
+            <button class="menu-control-content"
+                onclick="toggleSideBar()"
+                aria-label="Click to control sidebar">
+                <img src="./assets/imgs/menu-control.svg"
+                    alt="Menu control">
+            </button>
+        </div>
+    </body>
+</html>
