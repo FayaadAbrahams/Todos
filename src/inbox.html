@@ -7,54 +7,64 @@
         <script src="logic.js"></script>
     </head>
     <body>
-        <div class="sidebar-container">
-            <div class="top-inner-siderbar">
-                <li>
-                    <div class="profile-container">
-                        <button class="user-profile">
-                            <img class="user-profile-img"
-                                src="./assets/imgs/profile.svg"
-                                alt="Profile Icon">
-                            <h3>User Name</h3>
-                            <img class="drop-down"
-                                src="./assets/imgs/down-arrow.svg"
-                                alt="Down Arrow Icon">
+        <div class="layout-container">
+            <div class="sidebar-container">
+                <div class="top-inner-siderbar">
+                    <li>
+                        <div class="profile-container">
+                            <button class="user-profile">
+                                <img class="user-profile-img"
+                                    src="./assets/imgs/profile.svg"
+                                    alt="Profile Icon">
+                                <h3>User Name</h3>
+                                <img class="drop-down"
+                                    src="./assets/imgs/down-arrow.svg"
+                                    alt="Down Arrow Icon">
+                            </button>
+                            <button class="menu-control"
+                                onclick="toggleSideBar()">
+                                <img src="./assets/imgs/menu-control.svg"
+                                    alt="Menu control">
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <button>
+                            <img src="./assets/imgs/add.svg" alt="Add Icon">
+                            <span>Add Task</span>
                         </button>
-                        <button class="menu-control" onclick="toggleSideBar()">
-                            <img src="./assets/imgs/menu-control.svg"
-                                alt="Menu control">
+                    </li>
+                    <li>
+                        <button>
+                            <img src="./assets/imgs/check.svg"
+                                alt="Completed Icon">
+                            <span>Completed</span>
                         </button>
-                    </div>
-                </li>
-                <li>
-                    <button>
-                        <img src="./assets/imgs/add.svg" alt="Add Icon">
+                    </li>
+                    <li>
+                        <button>
+                            <img src="./assets/imgs/projects.svg"
+                                alt="Projects Icon">
+                            <span>My Projects</span>
+                        </button>
+                    </li>
+                </div>
+                <div class="resizer"></div>
+            </div>
+            <div class="main-content">
+                <button class="menu-control-content"
+                    onclick="toggleSideBar()"
+                    aria-label="Click to control sidebar">
+                    <img src="./assets/imgs/menu-control.svg"
+                        alt="Menu control">
+                </button>
+                <div class="task-input-area">
+                    <button class="add-task-input-btn">
+                        <img src="./assets/imgs/add.svg" alt="Add Task Icon">
                         <span>Add Task</span>
                     </button>
-                </li>
-                <li>
-                    <button>
-                        <img src="./assets/imgs/check.svg" alt="Completed Icon">
-                        <span>Completed</span>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <img src="./assets/imgs/projects.svg"
-                            alt="Projects Icon">
-                        <span>My Projects</span>
-                    </button>
-                </li>
+                </div>
             </div>
-            <div class="resizer"></div>
-        </div>
-        <div class="main-content">
-            <button class="menu-control-content"
-                onclick="toggleSideBar()"
-                aria-label="Click to control sidebar">
-                <img src="./assets/imgs/menu-control.svg"
-                    alt="Menu control">
-            </button>
         </div>
     </body>
 </html>

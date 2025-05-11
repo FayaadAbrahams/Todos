@@ -1,5 +1,10 @@
 let isCollapsed = false;
-let activeTab = ''; 
+let activeTab = 0;
+let tabs = [
+  { id: 0, value: 'Add Task' },
+  { id: 1, value: 'Completed' },
+  { id: 2, value: 'My Projects' }
+];
 
 function toggleSideBar() {
   const sidebar = document.querySelector('.sidebar-container');
@@ -8,8 +13,10 @@ function toggleSideBar() {
   sidebar.classList.toggle('collapsed');
   isCollapsed = sidebar.classList.contains('collapsed');
 
-  if (sideBarControlBtn) {
-    sideBarControlBtn.style.marginLeft = isCollapsed ? "10px" : "-999px";
+  if (isCollapsed) {
+    sideBarControlBtn.classList.add('visible');
+  } else {
+    sideBarControlBtn.classList.remove('visible');
   }
 }
 
