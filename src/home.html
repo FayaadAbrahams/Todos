@@ -5,11 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Todos!</title>
         <script src="logic.js"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+            rel="stylesheet">
     </head>
     <body>
         <div class="layout-container">
             <div class="sidebar-container">
-                <div class="top-inner-siderbar">
+                <ul class="top-inner-siderbar">
                     <li>
                         <div class="profile-container">
                             <button class="user-profile">
@@ -48,8 +51,9 @@
                             <span>My Projects</span>
                         </button>
                     </li>
-                </div>
-                <div class="resizer"></div>
+                </ul>
+        
+        <div class="resizer"></div>
             </div>
             <div class="main-content">
                 <button class="menu-control-content"
@@ -59,9 +63,9 @@
                         alt="Menu control">
                 </button>
                 <div class="task-input-area">
-                    <button class="add-task-input-btn">
+                    <button class="add-task-input-btn" onclick=" addTask()">
                         <img src="./assets/imgs/add.svg" alt="Add Task Icon">
-                        <span>Add Task</span>
+                        <span class="add-task-control">Add Task</span>
                     </button>
                 </div>
             </div>

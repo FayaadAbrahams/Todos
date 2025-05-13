@@ -1,15 +1,23 @@
 :root {
-    --primary-clr: rgba(250, 242, 207, 0.644);
+    --primary-clr: rgba(230, 185, 5, 0.753);
     --primary-clr-hover: rgb(241, 232, 187);
+    --primary-clr-dark: rgb(41, 38, 38);
+    --primary-clr-dark-hover: rgb(41, 38, 38, 0.2);
     --secondary-clr: rgb(214, 0, 23);
     --font-clr-light: white;
     --font-clr-dark: black;
     --animation-time: 0.4s;
+    --font: 'Roboto Mono', monospace;
+
+}
+
+* {
+    font-family: 'Roboto Mono', monospace !important;
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../assets/fonts/OpenSans.ttf') format('truetype');
+    font-family: 'Roboto Mono';
+    src: url('../assets/fonts/RobotoMono.ttf') format('truetype');
 }
 
 body {
@@ -22,10 +30,10 @@ body {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    font-family: 'Open Sans', sans-serif;
     transition: transform var(--animation-time) ease-in-out;
     transform: translateX(0);
 }
+
 
 .sidebar-container.collapsed {
     transform: translateX(-100%);
@@ -51,6 +59,7 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
+
 }
 
 .top-inner-siderbar button:hover {
@@ -73,7 +82,7 @@ body {
 
 .user-profile {
     height: 3rem !important;
-    width: 14rem !important;
+    width: 80% !important;
     display: flex;
 }
 
@@ -169,4 +178,61 @@ body {
 
 .add-task-input-btn:hover img {
     filter: brightness(0) saturate(100%) invert(18%) sepia(95%) saturate(7474%) hue-rotate(346deg) brightness(91%) contrast(119%);
+}
+
+.user-task {
+    border: 1px solid rgba(82, 82, 82, 0.247);
+    margin: 2rem;
+    padding: 30px;
+    width: 20rem;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.user-task .task-value,
+.user-task .task-desc {
+    border: none;
+    outline: none;
+}
+
+.task-value {
+    font-size: large;
+}
+
+.task-desc {
+    color: var(--font-clr-dark);
+}
+
+.user-task .delete-task-btn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: red;
+    width: 30px;
+    font-size: large;
+}
+
+.user-task .task-priority,
+.user-task .task-date,
+.user-task .task-add {
+    width: 10rem;
+}
+
+.task-top-container {
+    display: grid;
+    grid-template-columns: repeat(3);
+}
+
+
+
+.user-task .task-add {
+    background-color: var(--primary-clr);
+    border: none;
+    height: 25px;
+    width: 10.5rem;
+}
+
+.user-task .task-add:active {
+    padding: 2px;
 }
